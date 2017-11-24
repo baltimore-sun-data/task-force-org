@@ -1,64 +1,163 @@
-<!DOCTYPE html>
-<!--if lt IE 7<html class="no-js lt-ie9 lt-ie8 lt-ie7">
--->
-<!--if IE 7<html class="no-js lt-ie9 lt-ie8">
--->
-<!--if IE 8<html class="no-js lt-ie9">
--->
-<html class="no-js" lang="en">
-  <head>
-    <!--Basic page needs-->
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--Facebook Stuff-->
-    <meta property="og:title" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="The Baltimore Sun">
-    <meta property="og:description" content="">
-    <meta property="fb:app_id" content="310302989040998">
-    <!--Twitter Stuff-->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@baltimoresun">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:domain" content="baltimoresun.com">
-  </head>
-  <body><script>
-	((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
-		pageName: 'bs:dataproject:news:maryland:---:dataproject.',
-		channel: 'news:maryland',
-		server: 'data.baltimoresun.com',
-		hier1: 'baltimoresun:news:maryland',
-		hier2: 'news:maryland',
-		prop1: 'D=pageName',
-		prop2: 'news',
-		prop38: 'dataproject',
-		prop57: 'D=c38',
-		eVar20: 'baltimoresun',
-		eVar21: 'D=c38',
-		eVar34: 'D=ch',
-		eVar35: 'D=pageName',
-		events:''
-	});  
-</script>
 
-<script src="http://www.baltimoresun.com/thirdpartyservice?disablenav=false&disablessor=true" async></script>
-<div data-trb-thirdpartynav></div>
-    <div class="container">
-      <h1>H1 / MONTSERRAT</h1>
-      <p>P / LATO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec eros ac risus condimentum pretium. In faucibus quis risus sit amet ornare.</p><a href="" target="_blank">A / LATO / GOLDENROD</a>
-    </div>
-    <!--Javascript-->
-    <script src="js/min/jquery-3.0.0.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-</html>
+<style>html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  color: #1e1e1e;
+  font-size: 16px; }
+
+h1 {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif; }
+
+p, a {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif; }
+
+a {
+  color: #daa520;
+  text-decoration: none; }
+
+#task-force-org {
+  margin-top: 50px; }
+  #task-force-org ul, #task-force-org li {
+    position: relative;
+    list-style-type: none; }
+  #task-force-org ul {
+    list-style: none;
+    padding-left: 32px; }
+    #task-force-org ul > li:last-child::after {
+      height: 8px; }
+  #task-force-org li {
+    list-style: none;
+    padding-top: 3em; }
+    #task-force-org li:before, #task-force-org li:after {
+      content: "";
+      position: absolute;
+      left: -14px; }
+    #task-force-org li:before {
+      border-top: 3px solid black;
+      top: 3em;
+      width: 12px;
+      height: 0; }
+    #task-force-org li:after {
+      border-left: 3px solid black;
+      height: calc(100% + 3em);
+      width: 0px;
+      top: 2px; }
+    #task-force-org li.first {
+      padding-top: 1em; }
+      #task-force-org li.first:before {
+        top: 1em; }
+  #task-force-org .profile {
+    width: 100%;
+    max-width: 600px; }
+    #task-force-org .profile::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #task-force-org .profile img {
+      width: 100px;
+      float: left;
+      display: inline-block;
+      margin: 0 1em 1em 0; }
+    #task-force-org .profile .details {
+      padding-bottom: 1em;
+      background-color: #eee; }
+      #task-force-org .profile .details p {
+        clear: none; }
+      #task-force-org .profile .details .name {
+        margin: 0;
+        padding-top: 3px;
+        font-weight: bold;
+        font-size: 2em; }
+        @media (max-width: 500px) {
+          #task-force-org .profile .details .name {
+            font-size: 1.5em; } }
+
+/* Leaderboard */
+
+</style>
+<div class="container" id="task-force-org">
+  <ul>
+    <li class="first">
+      <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-jenkins.jpg"/>
+        <div class="details">
+          <p class="name">Wayne Jenkins</p>
+          <p>Description</p><a href="">Link out to article</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-gando.jpg"/>
+            <div class="details">
+              <p class="name">Momodu Gando</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-ward.jpg"/>
+            <div class="details">
+              <p class="name">Maurice Ward</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-taylor.jpg"/>
+        <div class="details">
+          <p class="name">Marcus Taylor</p>
+          <p>Description</p><a href="">Link out to article</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-rayam.jpg"/>
+            <div class="details">
+              <p class="name">Jemell Rayam</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-hendrix.jpg"/>
+            <div class="details">
+              <p class="name">Evodio Hendrix</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-hersl.jpg"/>
+        <div class="details">
+          <p class="name">Daniel Hersl</p>
+          <p>Description</p><a href="">Link out to article</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <div class="profile"><img src="http://data.baltimoresun.com/jin/p2p/task-force-org/images/officer-allers.jpg"/>
+            <div class="details">
+              <p class="name">Thomas Allers</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="profile"><img src="http://via.placeholder.com/200x270"/>
+            <div class="details">
+              <p class="name">John Clewell</p>
+              <p>Description</p><a href="">Link out to article</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

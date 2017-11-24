@@ -1,12 +1,13 @@
 {
-  "name": "PROJ-NAME-HERE",
+  "name": "task-force-org",
   "version": "1.0.0",
-  "description": "PROJ-NAME-HERE",
+  "description": "task-force-org",
   "main": "index.js",
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
     "scss": "node-sass -o dist/css src/scss",
     "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/min/app.min.js",
+    "imagemin": "imagemin src/images/* --out-dir=dist/images/",
     "serve": "browser-sync start --server dist 'dist/css/*.css, dist/js/*.js'",
     "reload": "browser-sync reload --files='dist/*'",
     "build:html": "npm run pug",
@@ -25,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USERNAME/PROJ-NAME-HERE.git"
+    "url": "git+https://github.com/USERNAME/task-force-org.git"
   },
   "keywords": ["baltimore sun"],
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/USERNAME/PROJ-NAME-HERE/issues"
+    "url": "https://github.com/USERNAME/task-force-org/issues"
   },
-  "homepage": "https://github.com/USERNAME/PROJ-NAME-HERE#readme",
+  "homepage": "https://github.com/USERNAME/task-force-org#readme",
   "devDependencies": {
   }
 }

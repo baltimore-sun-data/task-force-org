@@ -1,58 +1,74 @@
-- var datalink = "http://data.baltimoresun.com/PROJECTLINK/"
-- var datalink = ""
+- var datalink = "http://data.baltimoresun.com/jin/p2p/task-force-org/"
 
-doctype html
-//if lt IE 7
-	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
-//if IE 7
-	<html class="no-js lt-ie9 lt-ie8">
-//if IE 8
-	<html class="no-js lt-ie9">
-html(class="no-js", lang="en")
-	head
-		//Basic page needs
-		meta(charset="utf-8")
-		title
-		meta(name="description", content="")
-		meta(name="author", content="")
-		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif")
-		link(rel="stylesheet" href=datalink + "css/font-awesome.min.css")
-		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
+style
+	include ../dist/css/style.css
 
-		//Facebook Stuff
-		meta(property="og:title", content="")
-		meta(property="og:url", content="")
-		meta(property="og:image", content="")
-		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="")
-		meta(property="fb:app_id", content="310302989040998")
-		//Twitter Stuff
-		meta(name="twitter:card", content="summary")
-		meta(name="twitter:site", content="@baltimoresun")
-		meta(name="twitter:creator", content="")
-		meta(name="twitter:title", content="")
-		meta(name="twitter:description", content="")
-		meta(name="twitter:image", content="")
-		meta(name="twitter:domain", content="baltimoresun.com")
-
-		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-body below.
-		//- include includes/ad-for-header.html
-
-	body
-		//- This omniture file will also add a topnav.
-		//- Remember to update the omniture tags
-		include includes/omniture.html
-		.container
-			h1 H1 / MONTSERRAT
-			p P / LATO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec eros ac risus condimentum pretium. In faucibus quis risus sit amet ornare.
-			a(href="" target="_blank") A / LATO / GOLDENROD
-		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
-		//- #leaderboard
-			include includes/ad-for-body.html
-
-		//Javascript
-		script(src=datalink + "js/min/jquery-3.0.0.min.js")
-		script(src=datalink + "js/app.js")
-		//- script(src=datalink + "js/min/app.min.js")
-
+.container#task-force-org
+	ul
+		li.first
+			.profile
+				img(src=datalink + "images/officer-jenkins.jpg")
+				.details
+					p.name Wayne Jenkins
+					p Description
+					a(href="") Link out to article
+			ul
+				li
+					.profile
+						img(src=datalink + "images/officer-gando.jpg")
+						.details
+							p.name Momodu Gando
+							p Description
+							a(href="") Link out to article
+				li
+					.profile
+						img(src=datalink + "images/officer-ward.jpg")
+						.details
+							p.name Maurice Ward
+							p Description
+							a(href="") Link out to article
+		li
+			.profile
+				img(src=datalink + "images/officer-taylor.jpg")
+				.details
+					p.name Marcus Taylor
+					p Description
+					a(href="") Link out to article
+			ul
+				li
+					.profile
+						img(src=datalink + "images/officer-rayam.jpg")
+						.details
+							p.name Jemell Rayam
+							p Description
+							a(href="") Link out to article
+				li
+					.profile
+						img(src=datalink + "images/officer-hendrix.jpg")
+						.details
+							p.name Evodio Hendrix
+							p Description
+							a(href="") Link out to article
+		li
+			.profile
+				img(src=datalink + "images/officer-hersl.jpg")
+				.details
+					p.name Daniel Hersl
+					p Description
+					a(href="") Link out to article
+			ul
+				li
+					.profile
+						img(src=datalink + "images/officer-allers.jpg")
+						.details
+							p.name Thomas Allers
+							p Description
+							a(href="") Link out to article
+				li
+					.profile
+						//- img(src=datalink + "images/officer-clewell.jpg")
+						img(src="http://via.placeholder.com/200x270")
+						.details
+							p.name John Clewell
+							p Description
+							a(href="") Link out to article

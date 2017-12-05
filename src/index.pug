@@ -1,74 +1,162 @@
 - var datalink = "http://data.baltimoresun.com/jin/p2p/task-force-org/"
+- var datalink = ""
 
-style
-	include ../dist/css/style.css
+doctype html
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+html(class="no-js", lang="en")
+	head
+		//Basic page needs
+		meta(charset="utf-8")
+		title
+		meta(name="description", content="")
+		meta(name="author", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif")
+		link(rel="stylesheet" href=datalink + "css/font-awesome.min.css")
+		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
 
-.container#task-force-org
-	ul
-		li.first
-			.profile
-				img(src=datalink + "images/officer-jenkins.jpg")
-				.details
-					p.name Wayne Jenkins
-					p Description
-					a(href="") Link out to article
-			ul
-				li
+		//Facebook Stuff
+		meta(property="og:title", content="")
+		meta(property="og:url", content="")
+		meta(property="og:image", content="")
+		meta(property="og:site_name", content="The Baltimore Sun")
+		meta(property="og:description", content="")
+		meta(property="fb:app_id", content="310302989040998")
+		//Twitter Stuff
+		meta(name="twitter:card", content="summary")
+		meta(name="twitter:site", content="@baltimoresun")
+		meta(name="twitter:creator", content="")
+		meta(name="twitter:title", content="")
+		meta(name="twitter:description", content="")
+		meta(name="twitter:image", content="")
+		meta(name="twitter:domain", content="baltimoresun.com")
+
+		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-body below.
+		//- include includes/ad-for-header.html
+
+		//- style
+		//- 	include ../dist/css/style.css
+
+	body
+		//- This omniture file will also add a topnav.
+		//- Remember to update the omniture tags
+		include includes/omniture.html
+
+		.container#taskForce
+			h1 Task force org chart
+			p Maecenas mauris mi, dictum eu maximus nec, tempor vitae sem. Mauris ac nisl ac mauris placerat consectetur. Integer hendrerit neque orci, a tincidunt quam vulputate sed. Curabitur vitae mauris eu nunc luctus semper.
+			.orgChart
+				h2 Pending cases
+				.orgChart__row.orgChart__row--sgt
 					.profile
-						img(src=datalink + "images/officer-gando.jpg")
-						.details
-							p.name Momodu Gando
-							p Description
-							a(href="") Link out to article
-				li
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-allers.jpg")
+								p Sergeant
+							.text
+								h3 Sgt. Thomas Allers
+								p Charged with racketeering conspiracy, racketeering, robbery on August 24, 2017
+								p He is scheduled to plead guilty on Wednesday to one count of racketeering, according to his attorney.
+								p His next court date hasn’t been scheduled.
 					.profile
-						img(src=datalink + "images/officer-ward.jpg")
-						.details
-							p.name Maurice Ward
-							p Description
-							a(href="") Link out to article
-		li
-			.profile
-				img(src=datalink + "images/officer-taylor.jpg")
-				.details
-					p.name Marcus Taylor
-					p Description
-					a(href="") Link out to article
-			ul
-				li
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-jenkins.jpg")
+								p Sergeant
+							.text
+								h3 Sgt. Wayne Jenkins
+								p Charged with two counts of racketeering conspiracy; racketeering, aiding and abetting; racketeering; two counts of robbery and aiding and abetting; and two counts of possession of a firearm in furtherance of a crime of violence
+								p Charges were filed on February 23, 2017. A superseding incitement was filed on June 22, 2017.
+								p Jenkins was also charged with destruction, alteration or falsification of records in federal investigations; and deprivation of rights under color of law on November 30, 2017
+								p He has not entered a plea.
+								p A trial is tentatively scheduled for January.
+				.orgChart__row.orgChart__row--det
 					.profile
-						img(src=datalink + "images/officer-rayam.jpg")
-						.details
-							p.name Jemell Rayam
-							p Description
-							a(href="") Link out to article
-				li
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-hersl.jpg")
+								p Detective
+							.text
+								h3 Det. Daniel Hersl
+								p Charged with two counts of racketeering conspiracy; racketeering aiding and abetting; racketeering; robbery; and possession of a firearm in furtherance of a crime of violence
+								p Charges were filed on February 23, 2017. A superseding incitement was filed on June 22, 2017.
+								p He has pleaded not guilty.
+								p A trial is tentatively scheduled for January.
 					.profile
-						img(src=datalink + "images/officer-hendrix.jpg")
-						.details
-							p.name Evodio Hendrix
-							p Description
-							a(href="") Link out to article
-		li
-			.profile
-				img(src=datalink + "images/officer-hersl.jpg")
-				.details
-					p.name Daniel Hersl
-					p Description
-					a(href="") Link out to article
-			ul
-				li
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-taylor.jpg")
+								p Detective
+							.text
+								h3 Det. Marcus Taylor
+								p Charged with two counts of racketeering conspiracy; racketeering aiding and abetting; racketeering; robbery; and possession of a firearm in furtherance of a crime of violence aiding and abetting
+								p Charges were filed on February 23, 2017. A superseding incitement was filed on June 22, 2017.
+								p He had pleaded not guilty.
+								p A trial is tentatively scheduled for January.
 					.profile
-						img(src=datalink + "images/officer-allers.jpg")
-						.details
-							p.name Thomas Allers
-							p Description
-							a(href="") Link out to article
-				li
+						.profile__content
+							.image
+								img(src="http://via.placeholder.com/200x270")
+								p Detective
+							.text
+								h3 Det. Eric Snell
+								p Charged with conspiracy to distribute and possession with intent to distribute heroin and cocaine on November 9, 2017
+								p He has not entered a plea.
+								p His next court date hasn’t been scheduled.
+				h2 Pleaded guilty
+				.orgChart__row.orgChart__row--det
 					.profile
-						//- img(src=datalink + "images/officer-clewell.jpg")
-						img(src="http://via.placeholder.com/200x270")
-						.details
-							p.name John Clewell
-							p Description
-							a(href="") Link out to article
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-gando.jpg")
+								p Detective
+							.text
+								h3 Det. Momodu Bondeva Kenton Gondo
+								p Charged with racketeering conspiracy and racketeering aiding and abetting on February 23, 2017
+								p Charged with conspiracy to distribute and possession with intent to distribute heroin; and possession with intent to distribute and distribution of heroin and cocaine on February 17, 2016
+								p He pleaded guilty to one count of racketeering conspiracy and one count of conspiracy to distribute and possess with intent to distribute 100 grams or more of a mixture or substance containing heroin.
+								p Gondo faces as much as 40 years in prison--the longest maximum penalty of the indicted officers.
+								p His next court date hasn’t been scheduled.
+					.profile
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-hendrix.jpg")
+								p Detective
+							.text
+								h3 Det. Evodio Hendrix
+								p Charged with racketeering conspiracy, racketeering aiding and abetting on February 23, 2017
+								p He pleaded guilty to racketeering conspiracy.
+								p Hendrix faces up to 20 years in prison.
+								p Sentencing is scheduled in February, according to court records.
+					.profile
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-rayam.jpg")
+								p Detective
+							.text
+								h3 Det. Jemell Rayam
+								p Charged with racketeering conspiracy, racketeering aiding and abetting on February 23, 2017
+								p He pleaded guilty to racketeering conspiracy.
+								p Rayam faces up to 20 years in prison.
+								p His next court date hasn’t been scheduled.
+					.profile
+						.profile__content
+							.image
+								img(src=datalink + "images/officer-ward.jpg")
+								p Detective
+							.text
+								h3 Det. Maurice Ward
+								p Charged with racketeering conspiracy, racketeering aiding and abetting on February 23, 2017
+								p He pleaded guilty to racketeering conspiracy.
+								p Ward faces up to 20 years in prison.
+								p Sentencing is scheduled in February, according to court records.
+
+		//Javascript
+		script(src=datalink + "js/min/jquery-3.0.0.min.js")
+		script(src=datalink + "js/app.js")
+		//- script(src=datalink + "js/min/app.min.js")

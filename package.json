@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USERNAME/task-force-org.git"
+    "url": "git+https://github.com/baltimore-sun-data/task-force-org.git"
   },
   "keywords": ["baltimore sun"],
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/USERNAME/task-force-org/issues"
+    "url": "https://github.com/baltimore-sun-data/task-force-org/issues"
   },
-  "homepage": "https://github.com/USERNAME/task-force-org#readme",
+  "homepage": "https://github.com/baltimore-sun-data/task-force-org#readme",
   "devDependencies": {
   }
 }

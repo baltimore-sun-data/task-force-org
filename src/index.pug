@@ -1,4 +1,4 @@
-- var datalink = "http://data.baltimoresun.com/jin/p2p/task-force-org/"
+- var datalink = "http://data.baltimoresun.com/news/gun-trace-overview/"
 - var datalink = ""
 
 doctype html
@@ -12,60 +12,56 @@ html(class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
-		title
-		meta(name="description", content="")
+		title Gun Trace Task Force Overview
+		meta(name="description", content="Keep up-to-date with this overview of the Baltimore police racketeering cases.")
 		meta(name="author", content="")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif")
-		link(rel="stylesheet" href=datalink + "css/font-awesome.min.css")
-		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
+		link(rel="stylesheet" href=datalink + "css/font-awesome.css")
+		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css?1")
 
 		//Facebook Stuff
-		meta(property="og:title", content="")
-		meta(property="og:url", content="")
-		meta(property="og:image", content="")
+		meta(property="og:title", content="Gun Trace Task Force Overview")
+		meta(property="og:url", content="http://data.baltimoresun.com/news/gun-trace-overview/")
+		meta(property="og:image", content="http://data.baltimoresun.com/news/gun-trace-overview/images/thumb.jpg")
 		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="")
+		meta(property="og:description", content="Keep up-to-date with this overview of the Baltimore police racketeering cases.")
 		meta(property="fb:app_id", content="310302989040998")
 		//Twitter Stuff
 		meta(name="twitter:card", content="summary")
 		meta(name="twitter:site", content="@baltimoresun")
-		meta(name="twitter:creator", content="")
-		meta(name="twitter:title", content="")
-		meta(name="twitter:description", content="")
-		meta(name="twitter:image", content="")
+		meta(name="twitter:creator", content="@baltsundata")
+		meta(name="twitter:title", content="Gun Trace Task Force Overview")
+		meta(name="twitter:description", content="Keep up-to-date with this overview of the Baltimore police racketeering cases.")
+		meta(name="twitter:image", content="http://data.baltimoresun.com/news/gun-trace-overview/images/thumb.jpg")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-body below.
-		//- include includes/ad-for-header.html
-
-		//- style
-		//- 	include ../dist/css/style.css
+		include includes/ad-for-header.html
 
 	body
 		//- This omniture file will also add a topnav.
 		//- Remember to update the omniture tags
 		include includes/omniture.html
-
 		.container#taskForce
-			h1 Task force org chart
-			p Maecenas mauris mi, dictum eu maximus nec, tempor vitae sem. Mauris ac nisl ac mauris placerat consectetur. Integer hendrerit neque orci, a tincidunt quam vulputate sed. Curabitur vitae mauris eu nunc luctus semper.
-			.orgChart
+			h1 Gun Trace Task Force Overview
+			.shareTools
+				i.fa.fa-facebook
+				i.fa.fa-twitter
+			p.byline By 
+				a(href="http://www.baltimoresun.com/bal-jessica-anderson-20141007-staff.html" target="_blank") Jessica Anderson
+			p The eight officers in the elite Gun Trace Task Force carried out a campaign of robbery and extortion stretching back at least three years and often targeting suspected drug dealers, prosecutors say. The officers allegedly pocketed hundreds of thousands of dollars they discovered while searching the homes and cars of criminals and some innocent civilians, too.
+			p The federal corruption case spread beyond the city as authorities arrested a Philadelphia officer and charged him with helping distribute drugs stolen by members of the Gun Trace Task Force.
+			p These are the nine officers involved.
+
+			.orgChart.orgChart--pending
 				h2 Pending cases
-				.orgChart__row.orgChart__row--sgt
+				.orgChart__row
 					.profile
 						.profile__content
-							.image
-								img(src=datalink + "images/officer-allers.jpg")
-								p Sergeant
-							.text
-								h3 Sgt. Thomas Allers
-								p Charged with racketeering conspiracy, racketeering, robbery on August 24, 2017
-								p He is scheduled to plead guilty on Wednesday to one count of racketeering, according to his attorney.
-								p His next court date hasn’t been scheduled.
-					.profile
-						.profile__content
-							.image
+							.image.image--sgt
+								.overlay
+									i.fa.fa-hand-pointer-o
 								img(src=datalink + "images/officer-jenkins.jpg")
 								p Sergeant
 							.text
@@ -75,10 +71,10 @@ html(class="no-js", lang="en")
 								p Jenkins was also charged with destruction, alteration or falsification of records in federal investigations; and deprivation of rights under color of law on November 30, 2017
 								p He has not entered a plea.
 								p A trial is tentatively scheduled for January.
-				.orgChart__row.orgChart__row--det
+				.orgChart__row
 					.profile
 						.profile__content
-							.image
+							.image.image--det
 								img(src=datalink + "images/officer-hersl.jpg")
 								p Detective
 							.text
@@ -89,7 +85,7 @@ html(class="no-js", lang="en")
 								p A trial is tentatively scheduled for January.
 					.profile
 						.profile__content
-							.image
+							.image.image--det
 								img(src=datalink + "images/officer-taylor.jpg")
 								p Detective
 							.text
@@ -100,19 +96,33 @@ html(class="no-js", lang="en")
 								p A trial is tentatively scheduled for January.
 					.profile
 						.profile__content
-							.image
-								img(src="http://via.placeholder.com/200x270")
-								p Detective
+							.image.image--officer
+								img(src=datalink + "images/officer-snell.jpg")
+								p Officer
 							.text
-								h3 Det. Eric Snell
+								h3 Officer Eric Snell
 								p Charged with conspiracy to distribute and possession with intent to distribute heroin and cocaine on November 9, 2017
+								p Snell has been a Philadelphia officer for three years. He previously served as a Baltimore police officer, from July 2005 to March 2008.
 								p He has not entered a plea.
 								p His next court date hasn’t been scheduled.
+			.orgChart.orgChart--guilty
 				h2 Pleaded guilty
-				.orgChart__row.orgChart__row--det
+				.orgChart__row
 					.profile
 						.profile__content
-							.image
+							.image.image--sgt
+								img(src=datalink + "images/officer-allers.jpg")
+								p Sergeant
+							.text
+								h3 Sgt. Thomas Allers
+								p Charged with racketeering conspiracy, racketeering, robbery on August 24, 2017
+								p Pleaded guilty on Dec. 6 to racketeering conspiracy
+								p Allers faces a maximum sentence of 20 years in prison.
+								p He will be sentenced on Feb. 23.
+				.orgChart__row
+					.profile
+						.profile__content
+							.image.image--det
 								img(src=datalink + "images/officer-gando.jpg")
 								p Detective
 							.text
@@ -121,10 +131,10 @@ html(class="no-js", lang="en")
 								p Charged with conspiracy to distribute and possession with intent to distribute heroin; and possession with intent to distribute and distribution of heroin and cocaine on February 17, 2016
 								p He pleaded guilty to one count of racketeering conspiracy and one count of conspiracy to distribute and possess with intent to distribute 100 grams or more of a mixture or substance containing heroin.
 								p Gondo faces as much as 40 years in prison--the longest maximum penalty of the indicted officers.
-								p His next court date hasn’t been scheduled.
+								p His sentencing hasn’t been scheduled.
 					.profile
 						.profile__content
-							.image
+							.image.image--det
 								img(src=datalink + "images/officer-hendrix.jpg")
 								p Detective
 							.text
@@ -135,7 +145,7 @@ html(class="no-js", lang="en")
 								p Sentencing is scheduled in February, according to court records.
 					.profile
 						.profile__content
-							.image
+							.image.image--det
 								img(src=datalink + "images/officer-rayam.jpg")
 								p Detective
 							.text
@@ -143,10 +153,10 @@ html(class="no-js", lang="en")
 								p Charged with racketeering conspiracy, racketeering aiding and abetting on February 23, 2017
 								p He pleaded guilty to racketeering conspiracy.
 								p Rayam faces up to 20 years in prison.
-								p His next court date hasn’t been scheduled.
+								p His sentencing hasn’t been scheduled.
 					.profile
 						.profile__content
-							.image
+							.image.image--det
 								img(src=datalink + "images/officer-ward.jpg")
 								p Detective
 							.text
@@ -155,8 +165,25 @@ html(class="no-js", lang="en")
 								p He pleaded guilty to racketeering conspiracy.
 								p Ward faces up to 20 years in prison.
 								p Sentencing is scheduled in February, according to court records.
+			.readMore
+				h2 Read more:
+				p
+					a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-baltimore-racketeering-case-timeline-20170906-htmlstory.html" target="_blank") Baltimore police racketeering case timeline
+				p
+					a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-baltimore-police-indicted-20170301-story.html" target="_blank") Seven Baltimore Police officers indicted on federal racketeering charges
+				p
+					a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-ninth-officer-indicted-20171114-story.html" target="_blank") Feds indict Philadelphia officer in corruption case against elite Baltimore police unit
+				p
+					a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-baltimore-detective-update-20171122-story.html" target="_blank") Slain Baltimore detective was to testify in case of indicted officers
 
+			//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
+			#leaderboard
+				include includes/ad-for-body.html
+
+			p.design Design by Jin Bae Kim
+			p.design
+				a(href="http://www.baltimoresun.com/news/data/" target="_blank") baltsundata
 		//Javascript
 		script(src=datalink + "js/min/jquery-3.0.0.min.js")
-		script(src=datalink + "js/app.js")
+		script(src=datalink + "js/app.js?1")
 		//- script(src=datalink + "js/min/app.min.js")

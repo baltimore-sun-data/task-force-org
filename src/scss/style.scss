@@ -8,6 +8,9 @@
 // @import "normalize";
 // @import "fonts";
 
+$colorSgt: #c92a2a;
+$colorDet: #1c7cd6;
+$colorOff: #5f3dc4;
 body {
 	color: $offblack;
 	font-size: 16px; // body-level font size for "em"-scaled designs
@@ -16,7 +19,7 @@ h1 {
 	font-family: $georgia;
 }
 p,a {
-	font-family: $lato;
+	font-family: $georgia;
 }
 a {
 	color: $goldenrod;
@@ -27,26 +30,48 @@ a {
 	width: 100%;
 	max-width: 700px;
 	margin: 0 auto;
-	margin-top: 50px; // Pushes below topnav
+	margin-top: 70px; // Pushes below topnav
+	p.byline {
+		a {
+			font-weight: bold;
+		}
+	}
+	p.design {
+		text-align: right;
+		margin: 0;
+	}
 }
-
+.shareTools {
+	i {
+		font-size: 1.5em;
+		margin-right: .5em;
+		cursor: pointer;
+		&:hover {
+			color: lighten($offblack, 30);
+		}
+	}
+}
 .orgChart {
+	padding: 1em 0;
+	&--pending {
+		h2 {
+		}
+	}
+	&--guilty {
+		h2 {
+		}
+	}
 	h2 {
+		margin-bottom: 0;
+		background-color: #dee2e6;
 		font-size: 2em;
+		font-family: $montserrat;
 		text-transform: uppercase;
 		text-align: center;
 	}
 	&__row {
+		padding: 1em 0;
 		text-align: center;
-		margin-bottom: 2em;
-		&--sgt {
-			.image {
-
-			}
-		}
-		&--det {
-
-		}
 		.profile {
 			position: relative;
 			display: inline-block;
@@ -66,8 +91,29 @@ a {
 				position: relative;
 				float: left;
 				margin-right: 1em;
+				margin-bottom: 1em;
+				@include transition(opacity .5s ease);
+				&:hover {
+					opacity: .5;
+				}
+				&--sgt {
+					p {
+						background-color: $colorSgt;
+					}
+				}
+				&--det {
+					p {
+						background-color: $colorDet;
+					}
+				}
+				&--officer {
+					p {
+						background-color: $colorOff;
+					}
+				}
 				img {
 					width: 150px;
+					height: 200px;
 				}
 				p {
 					position: absolute;
@@ -75,30 +121,51 @@ a {
 					left: 0;
 					width: 100%;
 					margin: 0;
+					padding: .2em 0;
 					color: white;
-					background-color: #c92a2a;
 					font-size: 1.5em;
+					font-family: $lato;
 					text-align: center;
 					text-transform: uppercase;
+				}
+				.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: white;
+					animation: fader 2.5s infinite;
+					z-index: 8;
+					i {
+						position: absolute;
+						left: 40%;
+						top: 40%;
+						font-size: 2em;
+						color: $offblack;
+						animation: poker 2.5s infinite;
+					}
 				}
 			}
 			.text {
 				display: none;
+				padding-left: 170px;
 				color: white;
 				opacity: 0;
 				@include transition(opacity .5s ease);
 				h3 {
 					margin-top: 0;
+					text-transform: uppercase;
 				}
 				p {
-					margin: 0;
+				}
+				@media(max-width: 500px) {
+					padding-left: 0;
 				}
 			}
 			&.active {
 				.profile__content {
 					width: 95vw;
 					padding: 1em;
-					background: rgba($offblack, .8);
+					background: rgba($offblack, .9);
 					z-index: 9;
 				}
 				.image {
@@ -115,17 +182,44 @@ a {
 		}
 	}
 }
+.readMore {
+	margin-bottom: 2em;
+}
 
-
+@keyframes fader {
+	0% {
+		background: rgba(white, 0);
+	}
+	50% {
+		background: rgba(white, .7);
+	}
+	100% {
+		background: rgba(white, 0);
+	}
+}
+@keyframes poker {
+	0% {
+		left: 40%;
+		top: 60%;
+	}
+	50% {
+		left: 40%;
+		top: 40%;
+	}
+	100% {
+		left: 40%;
+		top: 60%;
+	}
+}
 
 /* Leaderboard */
-// #leaderboard {
-// 	width: 728px;
-// 	height: 90px;
-// 	background-color: #222222;
-// 	margin: 10px auto;
-// 	text-align: center;
-// 	@media (max-width: 730px){
-// 		display: none;
-// 	}
-// }
+#leaderboard {
+	width: 728px;
+	height: 90px;
+	background-color: #222222;
+	margin: 10px auto;
+	text-align: center;
+	@media (max-width: 730px){
+		display: none;
+	}
+}

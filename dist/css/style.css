@@ -18,61 +18,153 @@ a {
   color: #daa520;
   text-decoration: none; }
 
-#task-force-org {
-  margin-top: 50px; }
-  #task-force-org ul, #task-force-org li {
-    position: relative;
-    list-style-type: none; }
-  #task-force-org ul {
-    list-style: none;
-    padding-left: 32px; }
-    #task-force-org ul > li:last-child::after {
-      height: 8px; }
-  #task-force-org li {
-    list-style: none;
-    padding-top: 3em; }
-    #task-force-org li:before, #task-force-org li:after {
-      content: "";
-      position: absolute;
-      left: -14px; }
-    #task-force-org li:before {
-      border-top: 3px solid black;
-      top: 3em;
-      width: 12px;
-      height: 0; }
-    #task-force-org li:after {
-      border-left: 3px solid black;
-      height: calc(100% + 3em);
-      width: 0px;
-      top: 2px; }
-    #task-force-org li.first {
-      padding-top: 1em; }
-      #task-force-org li.first:before {
-        top: 1em; }
-  #task-force-org .profile {
-    width: 100%;
-    max-width: 600px; }
-    #task-force-org .profile::after {
-      clear: both;
-      content: "";
-      display: table; }
-    #task-force-org .profile img {
-      width: 100px;
-      float: left;
+#taskForce {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 70px; }
+  #taskForce p.byline a {
+    font-weight: bold; }
+  #taskForce p.design {
+    text-align: right;
+    margin: 0; }
+
+.shareTools i {
+  font-size: 1.5em;
+  margin-right: .5em;
+  cursor: pointer; }
+  .shareTools i:hover {
+    color: #6b6b6b; }
+
+.orgChart {
+  padding: 1em 0; }
+  .orgChart h2 {
+    margin-bottom: 0;
+    background-color: #dee2e6;
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center; }
+  .orgChart__row {
+    padding: 1em 0;
+    text-align: center; }
+    .orgChart__row .profile {
+      position: relative;
       display: inline-block;
-      margin: 0 1em 1em 0; }
-    #task-force-org .profile .details {
-      padding-bottom: 1em;
-      background-color: #eee; }
-      #task-force-org .profile .details p {
-        clear: none; }
-      #task-force-org .profile .details .name {
-        margin: 0;
-        padding-top: 3px;
-        font-weight: bold;
-        font-size: 2em; }
+      width: 150px;
+      height: 200px;
+      margin: .5em;
+      cursor: pointer; }
+      .orgChart__row .profile__content {
+        position: absolute;
+        left: 0;
+        width: 150px;
+        max-width: 700px;
+        text-align: left;
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
+      .orgChart__row .profile .image {
+        position: relative;
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease; }
+        .orgChart__row .profile .image:hover {
+          opacity: .5; }
+        .orgChart__row .profile .image--sgt p {
+          background-color: #c92a2a; }
+        .orgChart__row .profile .image--det p {
+          background-color: #1c7cd6; }
+        .orgChart__row .profile .image--officer p {
+          background-color: #5f3dc4; }
+        .orgChart__row .profile .image img {
+          width: 150px;
+          height: 200px; }
+        .orgChart__row .profile .image p {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          padding: .2em 0;
+          color: white;
+          font-size: 1.5em;
+          font-family: "Lato", sans-serif;
+          text-align: center;
+          text-transform: uppercase; }
+        .orgChart__row .profile .image .overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          animation: fader 2.5s infinite;
+          z-index: 8; }
+          .orgChart__row .profile .image .overlay i {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            font-size: 2em;
+            color: #1e1e1e;
+            animation: poker 2.5s infinite; }
+      .orgChart__row .profile .text {
+        display: none;
+        padding-left: 170px;
+        color: white;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease; }
+        .orgChart__row .profile .text h3 {
+          margin-top: 0;
+          text-transform: uppercase; }
         @media (max-width: 500px) {
-          #task-force-org .profile .details .name {
-            font-size: 1.5em; } }
+          .orgChart__row .profile .text {
+            padding-left: 0; } }
+      .orgChart__row .profile.active .profile__content {
+        width: 95vw;
+        padding: 1em;
+        background: rgba(30, 30, 30, 0.9);
+        z-index: 9; }
+      .orgChart__row .profile.active .image {
+        float: left; }
+        .orgChart__row .profile.active .image img {
+          width: 150px; }
+      .orgChart__row .profile.active .text {
+        display: block;
+        opacity: 1; }
+
+.readMore {
+  margin-bottom: 2em; }
+
+@keyframes fader {
+  0% {
+    background: rgba(255, 255, 255, 0); }
+  50% {
+    background: rgba(255, 255, 255, 0.7); }
+  100% {
+    background: rgba(255, 255, 255, 0); } }
+
+@keyframes poker {
+  0% {
+    left: 40%;
+    top: 60%; }
+  50% {
+    left: 40%;
+    top: 40%; }
+  100% {
+    left: 40%;
+    top: 60%; } }
 
 /* Leaderboard */
+#leaderboard {
+  width: 728px;
+  height: 90px;
+  background-color: #222222;
+  margin: 10px auto;
+  text-align: center; }
+  @media (max-width: 730px) {
+    #leaderboard {
+      display: none; } }
